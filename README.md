@@ -51,9 +51,12 @@ export interface I_buttonScss {
   'button': string
   'buttonActive': string
 }
-declare const styles: I_buttonScss;
+declare const styles: {[key in keyof I_buttonScss]: string};
 export default styles;
 ```
+
+It's important to note the difference between the default and named export.
+The default export has a signature index, whereas the named `I_buttonScss` does not.
 
 ### `banner`
 Adds a "banner" prefix to each generated file.

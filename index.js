@@ -29,7 +29,7 @@ module.exports = function(content) {
       for (let c of classes) {
         typings += `  '${c}': string\n`;
       }
-      typings += `}\ndeclare const styles: ${i};\nexport default styles;\n`;
+      typings += `}\ndeclare const styles: {[key in keyof ${i}]: string};\nexport default styles;\n`;
     }
   }
 
